@@ -45,11 +45,11 @@ function! s:ProcessCommand(choice, commands)
     let p        = cmd['prefix']
 
     if p == "console"
-        :! c
+        execute !c
     elseif p == "function"
-        :call c
+        execute call c
     elseif p == "command"
-        : c
+        execute c
     endif
 
 endfunction

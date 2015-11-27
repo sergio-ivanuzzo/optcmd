@@ -45,9 +45,11 @@ To work with this plugin, do next:
 
     let s:message = "Choose command:"
 
-    2) add keymap for call optcmd#ChooseCommand(s:commands) :
+    2) add keymap for call optcmd#ChooseCommand(message, commands) :
 
-        nmap <C-k> :call optcmd#ChooseCommand(s:message, s:commands) <CR>
+        nmap <C-k> :call optcmd#ChooseCommand(message, commands) <CR>
+
+        you can have as many keymaps for this as you want
 
     Commands prefixes:
         a) 'console' run command in external shell

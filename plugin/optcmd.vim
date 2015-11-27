@@ -19,6 +19,7 @@ function optcmd#ChooseCommand(message, commands)
 
 endfunction
 
+" converting commands list into string for passing into confirm() as choices
 function! s:ConvertCommands(commands)
     let result   = ""
 
@@ -45,11 +46,14 @@ function! s:ProcessCommand(choice, commands)
     let p        = cmd['prefix']
 
     if p == "console"
-        execute !c
+        " run command from shell
+        execute '!' . c
     elseif p == "function"
-        execute call c
+        " run command via call
+        execute 'call' . c
     elseif p == "command"
-        execute c
+        " run command as native vim function
+        execute '' . c
     endif
 
 endfunction

@@ -35,7 +35,7 @@ To work with this plugin, do next:
 
     1) add to your .vimrc list of dictionaries like below:
 
-    let s:commands = [
+    let commands = [
         \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},
         \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
         \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
@@ -43,7 +43,7 @@ To work with this plugin, do next:
 
     2) add greet message for confirm() :
 
-    let s:message = "Choose command:"
+    let message = "Choose command:"
 
     2) add keymap for call optcmd#ChooseCommand(message, commands) :
 

@@ -15,7 +15,7 @@ function optcmd#ChooseCommand(message, commands)
     let commands = s:ConvertCommands(a:commands)
     let choice   = confirm(a:message, commands)
 
-    call s:ProcessCommand(choice-1, g:optcmd#commands)
+    call s:ProcessCommand(choice-1, a:commands)
 
 endfunction
 
@@ -40,9 +40,7 @@ function! s:ConvertCommands(commands)
 endfunction
 
 function! s:ProcessCommand(choice, commands)
-    let commands = a:commands
-    let choice   = a:choice
-    let cmd      = commands[choice]
+    let cmd      = a:commands[a:choice]
     let c        = cmd['command']
     let p        = cmd['prefix']
 

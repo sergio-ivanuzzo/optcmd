@@ -12,6 +12,10 @@ Just add to your **.vimrc** next lines:
 
 **Plugin** 'sergio-ivanuzzo/optcmd'
 
+Then run:
+
+vim +PluginInstall +qall
+
 **QUICK START**
 
 To work with this plugin, do next:

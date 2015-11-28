@@ -15,7 +15,11 @@ function optcmd#ChooseCommand(message, commands)
     let commands = s:ConvertCommands(a:commands)
     let choice   = confirm(a:message, commands)
 
-    call s:ProcessCommand(choice-1, a:commands)
+    if choice == 0
+        return
+    else
+        call s:ProcessCommand(choice-1, a:commands)
+    endif
 
 endfunction
 

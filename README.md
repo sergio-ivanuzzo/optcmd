@@ -26,6 +26,22 @@ let commands = [
     \{'prefix': 'cmd', 'command': 'vim_native_command' ,'label': 'some vim cmd'}
     \]
 ```
+
+####OPTIONS
+#####Commands prefixes:
+
+- **shell** run command in external shell
+- **func** run command as vim function (via :call)
+- **cmd** run command as simple vim command
+
+#####Index 
+This option use as shortcut for confirm() (`:help confirm()` for more details).
+
+This option can be omitted (so, as shortcut will be use first letter of command or label)
+
+#####Label
+This option use for output as confirm() choice. Can be omitted.
+
     
 2) message for `confirm()` :
 
@@ -36,17 +52,6 @@ let commands = [
 `nmap <C-k> :call optcmd#ChooseCommand(message, commands) <CR>`
 
 " you can have as many keymaps for this as you want
-
-###Commands prefixes:
-
-- **shell** run command in external shell
-- **func** run command as vim function (via :call)
-- **cmd** run command as simple vim command
-    
-`Index` option use as shortcut for confirm() (`:help confirm()` for more details).
-This option can be omitted (so, as shortcut will be used first letter of command or label)
-
-`Label` option use for output as confirm() choice. Can be omitted.
 
 #ABOUT
 

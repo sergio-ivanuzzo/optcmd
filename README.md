@@ -18,7 +18,7 @@ Then run:
 
 To work with this plugin add to your .vimrc:
 
-1) list of dictionaries like below:
+1) **list of dictionaries** like below:
 ```
 let commands = [
     \{'prefix': 'shell', 'command': 'ls -al > file.txt', 'index': '1', 'label': 'ls'},
@@ -27,7 +27,7 @@ let commands = [
     \]
 ```
 
-####OPTIONS
+**OPTIONS**
 #####Commands prefixes:
 
 - **shell** run command in external shell
@@ -43,11 +43,11 @@ This option can be omitted (so, as shortcut will be use first letter of command 
 This option use for output as confirm() choice. Can be omitted.
 
     
-2) message for `confirm()` :
+2) **message** for `confirm()` :
 
 `let message = "Choose command:"`
 
-3) keymap for `call optcmd#ChooseCommand(message, commands)`:
+3) **keymap** for `call optcmd#ChooseCommand(message, commands)`:
 
 `nmap <C-k> :call optcmd#ChooseCommand(message, commands) <CR>`
 

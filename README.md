@@ -18,34 +18,34 @@ vim +PluginInstall +qall
 
 **QUICK START**
 
-To work with this plugin, do next:
+To work with this plugin do next:
 
-    1) add to your .vimrc list of dictionaries like below:
-
-    let commands = [
-        \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},
-        \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
-        \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
-        \]
-
-    2) add greet message for confirm() :
-
-    let message = "Choose command:"
-
-    2) add keymap for call optcmd#ChooseCommand(message, commands) :
-
-        nmap <C-k> :call optcmd#ChooseCommand(message, commands) <CR>
-
-        you can have as many keymaps for this as you want
-
-    Commands prefixes:
-        a) 'console' run command in external shell
-        b) 'function' run command as vim function (via :call)
-        c) 'command' run command as simple vim command
-
-    Index option uses as shortcut for confirm() (:help confirm() for more details).
-    This option can bi omitted (so, as shortcut will be used first letter of command)
+1) add to your .vimrc list of dictionaries like below:
+let commands = [
+    \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},
+    \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
+    \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
+    \]
     
+2) add message for confirm() :
+
+let message = "Choose command:"
+
+3) add keymap for call optcmd#ChooseCommand(message, commands) :
+
+nmap <C-k> :call optcmd#ChooseCommand(message, commands) <CR>
+
+" you can have as many keymaps for this as you want
+
+Commands prefixes:
+    a) 'console' run command in external shell
+    b) 'function' run command as vim function (via :call)
+    c) 'command' run command as simple vim command
+    
+Index option use as shortcut for confirm() (:help confirm() for more details).
+This option can bi omitted (so, as shortcut will be used first letter of command or label)
+
+Label option use for output as confirm() choice. Can be omitted.
 
 **ABOUT**
 

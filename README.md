@@ -10,17 +10,17 @@ Install this plugin using vundle (https://github.com/VundleVim/Vundle.vim).
 
 Just add to your **.vimrc** next lines:
 
-**Plugin** 'sergio-ivanuzzo/optcmd'
+`Plugin 'sergio-ivanuzzo/optcmd'`
 
 Then run:
 
-vim +PluginInstall +qall
+`vim +PluginInstall +qall`
 
 **QUICK START**
 
 To work with this plugin do next:
 
-1) add to your .vimrc list of dictionaries like below:
+1) add to your **.vimrc** list of dictionaries like below:
 ```
 let commands = [
     \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},

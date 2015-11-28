@@ -24,14 +24,23 @@ function! s:ConvertCommands(commands)
     let result   = ""
 
     for cmd in a:commands
-        if !empty(cmd['command']) && !empty(cmd['prefix'])
-            if !empty(cmd['index'])
+        if (has_key(cmd, 'command') && !empty(cmd['command'])) && (has_key(cmd, 'prefix') && !empty(cmd['prefix']))
+
+            " index use as shortcut for confirm()
+            if has_key(cmd, 'index') && !empty(cmd['index'])
                 let cmd_index = cmd['index']
             else
                 let cmd_index = ""
             endif
+
+            " label use for output as confirm() choice
+            if has_key(cmd, 'label') && !empty(cmd['label'])
+                let cmd_label = cmd['label']
+            else
+                let cmd_label = cmd['command']
+            endif
             
-            let item = "&" . cmd_index . "[" . cmd['prefix'] . "]" . cmd['command'] . "\n"
+            let item = "&" . cmd_index . cmd_label . "\n"
             let result .= item
         endif
     endfor

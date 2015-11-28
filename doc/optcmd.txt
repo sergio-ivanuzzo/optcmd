@@ -36,12 +36,12 @@ To work with this plugin, do next:
     1) add to your .vimrc list of dictionaries like below:
 
     let commands = [
-        \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},
+        \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1', 'label': 'ls'},
         \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
         \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
         \]
 
-    2) add greet message for confirm() :
+    2) add message for confirm() :
 
     let message = "Choose command:"
 
@@ -56,8 +56,10 @@ To work with this plugin, do next:
         b) 'function' run command as vim function (via :call)
         c) 'command' run command as simple vim command
 
-    Index option uses as shortcut for confirm() (:help confirm() for more details).
+    Index option use as shortcut for confirm() (:help confirm() for more details).
     This option can bi omitted (so, as shortcut will be used first letter of command)
+
+    Label option use for output as confirm() choice. Can be omitted.
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  4. About                                                                        *optcmdAbout*

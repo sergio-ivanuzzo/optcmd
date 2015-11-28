@@ -44,10 +44,10 @@ Commands prefixes:
     b) `'function'` run command as vim function (via :call)
     c) `'command'` run command as simple vim command
     
-Index option use as shortcut for confirm() (`:help confirm()` for more details).
+`Index` option use as shortcut for confirm() (`:help confirm()` for more details).
 This option can bi omitted (so, as shortcut will be used first letter of command or label)
 
-Label option use for output as confirm() choice. Can be omitted.
+`Label` option use for output as confirm() choice. Can be omitted.
 
 **ABOUT**
 

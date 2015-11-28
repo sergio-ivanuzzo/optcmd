@@ -57,3 +57,4 @@ If you have any questions, propositions etc, please, contact me *sergio.ivanuzzo
 
 I will be glad if you help me to improve this plugin!
 
+See also this plugin on vim.org: http://www.vim.org/scripts/script.php?script_id=5276

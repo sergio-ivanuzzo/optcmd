@@ -58,15 +58,18 @@ function! s:ProcessCommand(choice, commands)
     let c        = cmd['command']
     let p        = cmd['prefix']
 
-    if p == "console"
+    if     p == "shell"
         " run command from shell
         execute '!' . c
-    elseif p == "function"
+
+    elseif p == "func"
         " run command via call
-        execute 'call' . c
-    elseif p == "command"
+        execute 'call ' . c
+
+    elseif p == "cmd"
         " run command as native vim function
         execute '' . c
+
     endif
 
 endfunction

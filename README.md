@@ -40,9 +40,9 @@ let commands = [
 " you can have as many keymaps for this as you want
 
 Commands prefixes:
-    a) `shell` run command in external shell
-    b) `func` run command as vim function (via :call)
-    c) `cmd` run command as simple vim command
+    - `shell` run command in external shell
+    - `func` run command as vim function (via :call)
+    - `cmd` run command as simple vim command
     
 `Index` option use as shortcut for confirm() (`:help confirm()` for more details).
 This option can be omitted (so, as shortcut will be used first letter of command or label)

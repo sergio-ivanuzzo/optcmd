@@ -23,7 +23,7 @@ To work with this plugin do next:
 1) add to your **.vimrc** list of dictionaries like below:
 ```
 let commands = [
-    \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1'},
+    \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1', 'label': 'ls'},
     \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
     \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
     \]

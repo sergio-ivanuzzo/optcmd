@@ -25,7 +25,7 @@ To work with this plugin do next:
 let commands = [
     \{'prefix': 'console', 'command': 'ls -al > file.txt', 'index': '1', 'label': 'ls'},
     \{'prefix': 'function', 'command': 'somePluginFunction()', 'index': '2'},
-    \{'prefix': 'command', 'command': 'vim_native_command', index: '3'}
+    \{'prefix': 'command', 'command': 'vim_native_command' ,'label': 'some vim cmd'}
     \]
 ```
     

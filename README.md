@@ -51,8 +51,9 @@ This option can be omitted (so, as shortcut will be used first letter of command
 
 **ABOUT**
 
-I hope, this plugin will be useful for you! If you have any questions, propositions etc,
-please, contact me *sergio.ivanuzzo at gmail dot com*
+I hope, this plugin will be useful for you! 
+
+If you have any questions, propositions etc, please, contact me *sergio.ivanuzzo at gmail dot com*
 
 I will be glad if you help me to improve this plugin!
 
